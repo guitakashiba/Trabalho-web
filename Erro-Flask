@@ -1,0 +1,38 @@
+guilherme.takashiba@trabalho:~/trabalho3/FlaskProject$ pip3 install Flask
+Downloading/unpacking Flask
+  Downloading Flask-2.2.2-py3-none-any.whl (101kB): 101kB downloaded
+Downloading/unpacking click>=8.0 (from Flask)
+  Downloading click-8.1.3-py3-none-any.whl (96kB): 96kB downloaded
+Cleaning up...
+Exception:
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2482, in _dep_map
+    return self.__dep_map
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2344, in __getattr__
+    raise AttributeError(attr)
+AttributeError: _DistInfoDistribution__dep_map
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pip/basecommand.py", line 122, in main
+    status = self.run(options, args)
+  File "/usr/lib/python3/dist-packages/pip/commands/install.py", line 278, in run
+    requirement_set.prepare_files(finder, force_root_egg_info=self.bundle, bundle=self.bundle)
+  File "/usr/lib/python3/dist-packages/pip/req.py", line 1266, in prepare_files
+    req_to_install.extras):
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2291, in requires
+    dm = self._dep_map
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2484, in _dep_map
+    self.__dep_map = self._compute_dependencies()
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2517, in _compute_dependencies
+    common = frozenset(reqs_for_extra(None))
+  File "/usr/lib/python3/dist-packages/pkg_resources.py", line 2514, in reqs_for_extra
+    if req.marker_fn(override={'extra':extra}):
+  File "/usr/share/python-wheels/setuptools-3.3-py2.py3-none-any.whl/_markerlib/markers.py", line 113, in marker_fn
+    return eval(compiled_marker, environment)
+  File "<environment marker>", line 1, in <module>
+NameError: name 'platform_system' is not defined
+
+Storing debug log for failure in /home/guilherme.takashiba/.pip/pip.log
+
